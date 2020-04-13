@@ -1,20 +1,83 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="6" size-md="6" offset-md="3" size-sm="12" size-xs="12">
+        <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSeH8Q3ZItUfTel4TK-ZPjyXVNJRY1WSZwD8GDRfQ62YmTkVDj4&usqp=CAU"></ion-img>
+      </ion-col>
+      <!-- <ion-col size-lg="6" size-md="6" size-sm="12" size-xs="12">
+        <ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSeH8Q3ZItUfTel4TK-ZPjyXVNJRY1WSZwD8GDRfQ62YmTkVDj4&usqp=CAU"></ion-img>
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-margin ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQB1vIFf854VrA6iqSkNCxIgwedNf1I091r-awfHJu1Js8KbPgY&usqp=CAU">
+            </ion-avatar>
+            <ion-label>
+              <h2>Quick Access 1</h2>
+              <h3 class="recipe-desc">Description of Quick access 1</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-circle" color="primary"></ion-icon>
+          </ion-item>
+      
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQB1vIFf854VrA6iqSkNCxIgwedNf1I091r-awfHJu1Js8KbPgY&usqp=CAU">
+            </ion-avatar>
+            <ion-label>
+              <h2>Quick Access 2</h2>
+              <h3 class="recipe-desc">Description of Quick access 2</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-circle" color="primary"></ion-icon>
+          </ion-item>
+      
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQB1vIFf854VrA6iqSkNCxIgwedNf1I091r-awfHJu1Js8KbPgY&usqp=CAU">
+            </ion-avatar>
+            <ion-label>
+              <h2>Quick Access 3</h2>
+              <h3 class="recipe-desc">Description of Quick access 3</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-circle" color="primary"></ion-icon>
+          </ion-item>
+      
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQB1vIFf854VrA6iqSkNCxIgwedNf1I091r-awfHJu1Js8KbPgY&usqp=CAU">
+            </ion-avatar>
+            <ion-label>
+              <h2>Quick Access 4</h2>
+              <h3 class="recipe-desc">Description of Quick access 4</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-circle" color="primary"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-margin ion-padding">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+          <div class="ion-text-center">
+            <ion-button [routerLink]="['/login']" class="ion-padding">
+              Login  
+            </ion-button>
+            <ion-button [routerLink]="['/register']" class="ion-padding">
+              SignUp
+            </ion-button>
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

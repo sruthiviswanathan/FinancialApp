@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col size-xs="12" size-md="6" offset-md="3">
+      <form [formGroup]="registerForm">
+        <div class="ion-margin ion-padding">
+          <ion-item [ngClass]="{ 'is-invalid': registerForm.controls['userName'].touched && registerForm.controls['userName'].invalid }" >
+            <ion-label position="floating">UserName<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input type="text" name="userName" formControlName="userName" required></ion-input>
+          </ion-item>
+
+          <ion-item [ngClass]="{ 'is-invalid': registerForm.controls['email'].touched && registerForm.controls['email'].invalid }" >
+            <ion-label position="floating">Email<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input type="email" name="email" formControlName="email" required></ion-input>
+          </ion-item>
+
+          <ion-item [ngClass]="{ 'is-invalid': registerForm.controls['phoneNumber'].touched && registerForm.controls['phoneNumber'].invalid }" >
+            <ion-label position="floating">Phone Number<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input type="tel" name="phoneNumber" formControlName="phoneNumber" required></ion-input>
+          </ion-item>
+
+          <ion-item [ngClass]="{ 'is-invalid': registerForm.controls['password'].touched && registerForm.controls['password'].invalid }">
+            <ion-label position="floating">Password<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input type="password" name="password" formControlName="password" required></ion-input>
+          </ion-item>
+
+          <ion-item [ngClass]="{ 'is-invalid': registerForm.controls['confirmPassword'].touched && registerForm.controls['confirmPassword'].invalid }">
+            <ion-label position="floating">Confirm Password<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input type="password" name="confirmPassword" formControlName="confirmPassword" required></ion-input>
+          </ion-item>
+
+        </div>
+
+        <div class="ion-margin ion-padding">
+          <ion-button (click)="register()" expand="block">Register</ion-button>
+        </div>
+
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
