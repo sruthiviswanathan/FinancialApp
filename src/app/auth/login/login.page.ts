@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AuthorizationService } from 'src/app/services/auth/authorization.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class LoginPage implements OnInit {
 
   loginForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private authService: AuthorizationService) { }
 
   ngOnInit() {
     this.createLoginForm();
@@ -22,9 +23,17 @@ export class LoginPage implements OnInit {
     });
   }
 
-  login() {
+ async login() {
     if(this.loginForm.valid) {
-      console.log(this.loginForm.value);
+      try {
+        const data = {
+          email: this.loginForm.value.email,
+          password: this.loginForm.value.password
+        };
+        await this.authService.loginService(data);
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       Object.keys(this.loginForm.controls).forEach(control => {
         this.loginForm.get(control).markAsTouched({ onlySelf: true});
